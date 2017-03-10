@@ -75,8 +75,8 @@ function checkIfIsDir(path) {
 }
 
 export function startWatch(imagePath, outputFile) {
-  watch.watchTree('./assets', (f, curr, prev) => {
-    writeFile('./assets', './src/utils/imageExport.ts');
+  watch.watchTree(imagePath, (f, curr, prev) => {
+    writeFile(imagePath, outputFile);
   });
 }
 //# sourceMappingURL=imageWatcher.js.map

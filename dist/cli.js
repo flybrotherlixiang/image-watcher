@@ -4,5 +4,8 @@
 
 import { startWatch } from 'dist/lib/imageWatcher';
 
-export const startFileWatch = startWatch;
+const imagePath = process.argv[2];
+const exportJsPath = process.argv[3];
+
+startWatch(imagePath, exportJsPath);
 //# sourceMappingURL=cli.js.map
