@@ -1,1 +1,0 @@
-{"version":3,"sources":["../index.js"],"names":["startWatch","startFileWatch"],"mappings":"AAAA;;;;AAIA,SAAQA,UAAR,QAAyB,uBAAzB;;AAEA,OAAO,MAAMC,iBAAiBD,UAAvB","file":"index.js","sourcesContent":["/**\n * Created by haha370104 on 2017/3/10.\n */\n\nimport {startWatch} from 'dist/lib/imageWatcher'\n\nexport const startFileWatch = startWatch;"]}

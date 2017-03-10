@@ -1,3 +1,8 @@
+/**
+ * Created by haha370104 on 2017/3/10.
+ */
+
+
 let getAllFiles = (() => {
   var _ref = _asyncToGenerator(function* (folderPath) {
     let result = {};
@@ -74,9 +79,14 @@ function checkIfIsDir(path) {
   });
 }
 
-export function startWatch(imagePath, outputFile) {
-  watch.watchTree(imagePath, (f, curr, prev) => {
-    writeFile(imagePath, outputFile);
+function startWatch(imagePath, outputFile) {
+  watch.watchTree('./assets', (f, curr, prev) => {
+    writeFile('./assets', './src/utils/imageExport.ts');
   });
 }
 //# sourceMappingURL=imageWatcher.js.map
+
+const imagePath = process.argv[2];
+const exportJsPath = process.argv[3];
+
+startWatch(imagePath, exportJsPath);
