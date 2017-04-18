@@ -66,10 +66,10 @@ function startWatch(imagePath, outputFile) {
 
 const imagePath = process.argv[2];
 const exportJsPath = process.argv[3];
-const needWatcher = process.argv[4];
+const singleRequire = process.argv[4];
 
-if (needWatcher) {
-  startWatch(imagePath, exportJsPath);
-} else {
+if (singleRequire) {
   writeFile(imagePath, exportJsPath);
+} else {
+  startWatch(imagePath, exportJsPath);
 }
